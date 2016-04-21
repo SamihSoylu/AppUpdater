@@ -1,0 +1,7 @@
+E:\Visual Studio Projects\Updater\Updater\bin\Release\Updater.exe.config
+E:\Visual Studio Projects\Updater\Updater\bin\Release\Updater.exe
+E:\Visual Studio Projects\Updater\Updater\obj\Release\Updater.exe
+\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\bin\Release\Dark Times Launcher.exe.config
+\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\bin\Release\Dark Times Launcher.exe
+\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\obj\Release\Dark Times Launcher.exe
+\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\obj\Release\Updater.csprojResolveAssemblyReference.cache
