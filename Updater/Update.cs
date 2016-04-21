@@ -194,7 +194,7 @@ namespace Updater
         {
             if (!processable) { finalizable = false; return; }
 
-            Console.WriteLine("DOWNLOADING: latest{0}.zip", SERV_VERSION);
+            Console.WriteLine("DOWNLOAD [START]");
 
             /*
              * Important note: Do not get latest.zip and latest#.zip mixed up
@@ -202,24 +202,30 @@ namespace Updater
              *                 and then it is renamed to the version number of 
              *                 the server.
              */
+            for (int i = VERSION; i < SERV_VERSION; i++)
+            {
+                int z = i + 1;
+                string changeToFileName = "update" + z + ".zip";
 
-            string changeToFileName = "latest" + SERV_VERSION + ".zip";
+                Console.WriteLine("DOWNLOADING: " + changeToFileName);
 
-            downloader.InitiateDownload(URL + "latest.zip", changeToFileName);
+                downloader.InitiateDownload(URL + "version"+ z +".zip", changeToFileName);
             
+            }
+
             // loop above this if statement so else is acceptable
 
             if (!downloader.err) { finalizable = true; }
 
             if (finalizable)
             {
-                Console.WriteLine("ARCHIVE DOWNLOAD: [SUCCESS]");
+                Console.WriteLine("DOWNLOAD [SUCCESS]");
                 if (!executeInstantly)
                     Thread.Sleep(2000);
             }
             else
             {
-                Console.WriteLine("ARCHIVE DOWNLOAD: [FAIL]");
+                Console.WriteLine("DOWNLOAD [FAIL]");
             }
         }
         
@@ -233,30 +239,47 @@ namespace Updater
 
             Console.WriteLine("");
 
-            Console.WriteLine("DECOMPRESS [START] ");
+            Console.WriteLine("\nDECOMPRESS [START]\n\n");
 
             if (!executeInstantly)
                 Thread.Sleep(1000);
 
-            string fileName = "latest" + SERV_VERSION + ".zip";
-            if (archive.decompress(fileName))
+            bool extractedWithNoErrors = true;
+
+            for (int i = VERSION; i < SERV_VERSION; i++)
             {
+                int z = i + 1; 
+                string fileName = "update" + z + ".zip";
 
-                if (!executeInstantly)
-                    Thread.Sleep(1000);
+                Console.WriteLine("DECOMPRESSING: " + fileName);
 
-                Console.WriteLine("");
-                Console.WriteLine("CLEAN UP: " + fileName + " [DELETED]");
-                File.Delete(fileName);
+                if (archive.decompress(fileName))
+                {
+                    Console.WriteLine("CLEAN UP: " + fileName + " [DELETED]");
+                    File.Delete(fileName);
 
-                VERSION = SERV_VERSION;
+                    VERSION = z;
+
+                    Console.WriteLine("\n");
+
+                }
+                else
+                {
+                    extractedWithNoErrors = false;
+                }
+            }
+
+            Console.WriteLine("DECOMPRESS: [END]");
+
+            if (extractedWithNoErrors)
+            {
 
                 filemanager.UpdateConfig(json.Encode(URL, EXE, VERSION));
-
                 Console.WriteLine("\nUPDATE [SUCCESS]");
-            }
-            else
-            {
+
+            } else {
+                Console.WriteLine("\nUPDATE [FAILED]");
+                Console.WriteLine("RE INSTALL REQUIRED [END]");
                 Thread.Sleep(5000);
             }
         }

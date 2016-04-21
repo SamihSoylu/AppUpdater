@@ -50,7 +50,6 @@ namespace Updater
                 {
                     //Console.WriteLine("\nCOULD NOT FIND [" + update.EXE + "]");
                 }
-
                 Thread.Sleep(3000);
 
                 Environment.Exit(0);

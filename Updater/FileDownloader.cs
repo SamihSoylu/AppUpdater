@@ -47,7 +47,7 @@ namespace Updater
                 _completed = true;
                 err = true;
 
-                Console.WriteLine("ARCHIVE DOWNLOAD: [NOT FOUND]");
+                Console.WriteLine("DOWNLOAD [NOT FOUND]");
                 
             }
 
@@ -75,7 +75,7 @@ namespace Updater
         {
             if (e.Cancelled == true)
             {
-                Console.WriteLine("ARCHIVE DOWNLOAD: [CANCELLED]");
+                Console.WriteLine("DOWNLOAD [CANCELLED]");
                 _completed = false;
             }
             else if (this.err == false)

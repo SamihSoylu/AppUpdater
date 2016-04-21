@@ -59,7 +59,7 @@ namespace Updater
                 return false;
             }
 
-            Console.WriteLine("DECOMPRESSION: [SUCCESS]");
+            Console.WriteLine("DECOMPRESS [SUCCESS]");
             return true;
 
         }
