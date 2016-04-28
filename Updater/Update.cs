@@ -23,7 +23,7 @@ namespace Updater
 
         // Initalized variables
         private string URL;
-        public string EXE;
+        public string pathToExecutableFile;
         private int VERSION; // max: 2,147,483,647
         private int SERV_VERSION;
         private bool processable, finalizable;
@@ -34,7 +34,7 @@ namespace Updater
         {
             this.VERSION = json.updateVersion;
             this.URL = json.updateUrl;
-            this.EXE = json.whenFinishedLaunch;
+            this.pathToExecutableFile = json.whenFinishedLaunch;
         }
 
         // ------------- Begin of Setup Method -------------
@@ -66,11 +66,11 @@ namespace Updater
 
                         // Asks for user update URL
                         Console.Write("\nEnter the URL to check for updates: ");
-                        URL = Convert.ToString(Console.ReadLine());
+                        this.URL = Convert.ToString(Console.ReadLine());
 
                         // Asks for file name to open after completition
                         Console.Write("Enter the file name that will be opened once updates are complete (Example: client.exe): ");
-                        EXE = Convert.ToString(Console.ReadLine());
+                        this.pathToExecutableFile = Convert.ToString(Console.ReadLine());
 
                         // Ask if user made a mistake above
                         Console.Write("Did you make a mistake above? Press Y to restart or any other key to continue: ");
@@ -87,7 +87,7 @@ namespace Updater
                     Console.WriteLine("--Creating config file.");
                     Thread.Sleep(1000);
 
-                    if (filemanager.CreateConfig(json.Encode(URL, EXE)))
+                    if (filemanager.CreateConfig(json.Encode(this.URL, this.pathToExecutableFile)))
                     {
                         Console.WriteLine("--Writing to config file.");
                         Thread.Sleep(1000);
@@ -144,7 +144,7 @@ namespace Updater
                 HttpWebResponse response = (HttpWebResponse)conn.GetResponse();
 
                 StreamReader reader = new StreamReader(response.GetResponseStream());
-                SERV_VERSION = Convert.ToInt32(reader.ReadToEnd());
+                this.SERV_VERSION = Convert.ToInt32(reader.ReadToEnd());
 
                 reader.Close();
                 response.Close();
@@ -169,7 +169,7 @@ namespace Updater
                 else
                 {
                     Console.WriteLine("LATEST UPDATE IS PRESENT");
-                    processable = false;
+                    this.processable = false;
                     return;
                 }
 
@@ -179,12 +179,12 @@ namespace Updater
             {
                 Console.WriteLine("CONNECTION: [FAILED]");
                 filemanager.errLog(e.ToString());
-                processable = false; return;
+                this.processable = false; return;
             }
 
             Console.WriteLine(""); // just to add a space
 
-            processable = true; // must be true at end
+            this.processable = true; // must be true at end
 
         }
         // ------------- End of Initalization Method -------------
@@ -215,7 +215,7 @@ namespace Updater
 
             // loop above this if statement so else is acceptable
 
-            if (!downloader.err) { finalizable = true; }
+            if (!downloader.err) { this.finalizable = true; }
 
             if (finalizable)
             {
@@ -258,7 +258,7 @@ namespace Updater
                     Console.WriteLine("CLEAN UP: " + fileName + " [DELETED]");
                     File.Delete(fileName);
 
-                    VERSION = z;
+                    this.VERSION = z;
 
                     Console.WriteLine("\n");
 
@@ -274,7 +274,7 @@ namespace Updater
             if (extractedWithNoErrors)
             {
 
-                filemanager.UpdateConfig(json.Encode(URL, EXE, VERSION));
+                filemanager.UpdateConfig(json.Encode(URL, pathToExecutableFile, VERSION));
                 Console.WriteLine("\nUPDATE [SUCCESS]");
 
             } else {

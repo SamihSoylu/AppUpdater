@@ -26,7 +26,7 @@ namespace Updater
         // Begind sdownload process
         public void InitiateDownload(string address, string saveAs="update.zip")
         {
-            _completed = false;
+            this._completed = false;
 
             Uri Uri = new Uri(address);
 
@@ -44,8 +44,8 @@ namespace Updater
             catch (WebException e)
             {
                 filemanager.errLog(e.ToString());
-                _completed = true;
-                err = true;
+                this._completed = true;
+                this.err = true;
 
                 Console.WriteLine("DOWNLOAD [NOT FOUND]");
                 
@@ -76,12 +76,12 @@ namespace Updater
             if (e.Cancelled == true)
             {
                 Console.WriteLine("DOWNLOAD [CANCELLED]");
-                _completed = false;
+                this._completed = false;
             }
             else if (this.err == false)
             {
                 // Console.WriteLine("ARCHIVE DOWNLOAD: [SUCCESS]");
-                _completed = true;
+                this._completed = true;
             }
         }
     }

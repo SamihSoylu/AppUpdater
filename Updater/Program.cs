@@ -28,7 +28,7 @@ namespace Updater
 
             update.executeInstantly = true;
 
-            Console.WriteLine("");
+            Console.WriteLine(" ");
 
             if (!File.Exists("updater.bin")) {
 
@@ -36,20 +36,23 @@ namespace Updater
                 
             } else {
 
-                update.initialization(); // reads updater.bin
-                
-                update.process(); // downloads latest update
+                // Reads updater.bin
+                update.initialization();
+
+                // Downloads latest update
+                update.process();
 
                 update.finalization(); // extracts latest updates, re-writes updater.bin
 
                 try
                 {
-                    System.Diagnostics.Process.Start(update.EXE); // opens up exe file after update
+                    System.Diagnostics.Process.Start(update.pathToExecutableFile); // opens up exe file after update
                 }
                 catch
                 {
                     //Console.WriteLine("\nCOULD NOT FIND [" + update.EXE + "]");
                 }
+
                 Thread.Sleep(3000);
 
                 Environment.Exit(0);

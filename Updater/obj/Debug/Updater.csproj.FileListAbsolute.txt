@@ -10,8 +10,3 @@ E:\Visual Studio Projects\Updater\Updater\obj\Debug\Updater.pdb
 E:\Visual Studio Projects\Updater\Updater\bin\Debug\Updater.exe
 E:\Visual Studio Projects\Updater\Updater\bin\Debug\Updater.pdb
 E:\Visual Studio Projects\Updater\Updater\obj\Debug\Updater.csprojResolveAssemblyReference.cache
-\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\bin\Debug\Dark Times Launcher.exe.config
-\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\bin\Debug\Dark Times Launcher.exe
-\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\bin\Debug\Dark Times Launcher.pdb
-\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\obj\Debug\Dark Times Launcher.exe
-\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\obj\Debug\Dark Times Launcher.pdb

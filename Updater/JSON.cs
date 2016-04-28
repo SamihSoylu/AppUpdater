@@ -35,9 +35,9 @@ namespace Updater
 
                 // Note to self JsonDeserializer is a class at the bottom of this file
 
-                updateUrl = d.GetString("updateUrl");
-                whenFinishedLaunch = d.GetString("whenFinishedLaunch");
-                updateVersion = Convert.ToInt32(d.GetInt("updateVersion"));
+                this.updateUrl = d.GetString("updateUrl");
+                this.whenFinishedLaunch = d.GetString("whenFinishedLaunch");
+                this.updateVersion = Convert.ToInt32(d.GetInt("updateVersion"));
 
                 d = null;
                 return true;
