@@ -1,0 +1,8 @@
+E:\Visual Studio Projects\AppUpdate\AppUpdate\bin\Release\AppUpdate.exe.config
+E:\Visual Studio Projects\AppUpdate\AppUpdate\bin\Release\AppUpdate.exe
+E:\Visual Studio Projects\AppUpdate\AppUpdate\obj\Release\AppUpdate.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\AppUpdate\AppUpdate\obj\Release\AppUpdate.exe
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate\AppUpdate\bin\Release\AppUpdate.exe.config
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate\AppUpdate\obj\Release\AppUpdate.exe
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate\AppUpdate\bin\Release\AppUpdate.exe
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate\AppUpdate\obj\Release\AppUpdate.csprojResolveAssemblyReference.cache

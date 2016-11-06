@@ -1,0 +1,8 @@
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\bin\Debug\Versioner.exe.config
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\bin\Debug\Versioner.exe
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\bin\Debug\Versioner.pdb
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\obj\Debug\Versioner.BinEditor.resources
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\obj\Debug\Versioner.Properties.Resources.resources
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\obj\Debug\Bin Editor.csproj.GenerateResource.Cache
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\obj\Debug\Versioner.exe
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\obj\Debug\Versioner.pdb

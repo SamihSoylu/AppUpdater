@@ -88,7 +88,7 @@ namespace AppUpdate
                 // Gives the user a chance to read before it quits.
                 Thread.Sleep(3000);
 
-                //Environment.Exit(0);
+                Environment.Exit(0);
             }
 
             Console.ReadKey();

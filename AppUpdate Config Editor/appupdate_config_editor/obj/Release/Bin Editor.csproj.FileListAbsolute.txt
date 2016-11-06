@@ -1,0 +1,21 @@
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\obj\Release\Bin Editor.csprojResolveAssemblyReference.cache
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\obj\Release\Versioner.BinEditor.resources
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\obj\Release\BinEditor.Properties.Resources.resources
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\obj\Release\Bin Editor.csproj.GenerateResource.Cache
+E:\Visual Studio Projects\Versioner\Versioner\bin\Release\Bin Editor.exe.config
+E:\Visual Studio Projects\Versioner\Versioner\obj\Release\Bin Editor.exe
+E:\Visual Studio Projects\Versioner\Versioner\obj\Release\Bin Editor.pdb
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\bin\Release\AppUpdate Config Editor.exe.config
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\bin\Release\AppUpdate Config Editor.exe
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\bin\Release\AppUpdate Config Editor.pdb
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\obj\Release\AppUpdate Config Editor.exe
+\\VBOXSVR\Stack\Visual Studio Projects\Versioner\Versioner\obj\Release\AppUpdate Config Editor.pdb
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate Config Editor\appupdate_config_editor\bin\Release\AppUpdate Config Editor.exe.config
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate Config Editor\appupdate_config_editor\obj\Release\AppUpdate Config Editor.exe
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate Config Editor\appupdate_config_editor\obj\Release\AppUpdate Config Editor.pdb
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate Config Editor\appupdate_config_editor\bin\Release\AppUpdate Config Editor.exe
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate Config Editor\appupdate_config_editor\bin\Release\AppUpdate Config Editor.pdb
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate Config Editor\appupdate_config_editor\obj\Release\Bin Editor.csprojResolveAssemblyReference.cache
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate Config Editor\appupdate_config_editor\obj\Release\Versioner.BinEditor.resources
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate Config Editor\appupdate_config_editor\obj\Release\BinEditor.Properties.Resources.resources
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate Config Editor\appupdate_config_editor\obj\Release\Bin Editor.csproj.GenerateResource.Cache

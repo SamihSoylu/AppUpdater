@@ -1,0 +1,11 @@
+E:\Visual Studio Projects\Updater\Updater\bin\Release\Updater.exe.config
+E:\Visual Studio Projects\Updater\Updater\bin\Release\Updater.exe
+E:\Visual Studio Projects\Updater\Updater\obj\Release\Updater.exe
+\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\bin\Release\Launcher.exe.config
+\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\bin\Release\Launcher.exe
+\\VBOXSVR\Stack\Visual Studio Projects\Updater\Updater\obj\Release\Launcher.exe
+C:\Users\Samih\Desktop\Updater\Updater\bin\Release\Launcher.exe.config
+C:\Users\Samih\Desktop\Updater\Updater\obj\Release\Launcher.exe
+C:\Users\Samih\Desktop\Updater\Updater\bin\Release\p_updater.exe.config
+C:\Users\Samih\Desktop\Updater\Updater\bin\Release\AppUpdater.exe.config
+C:\Users\Samih\Desktop\Updater\Updater\bin\Release\AppUpdate.exe.config

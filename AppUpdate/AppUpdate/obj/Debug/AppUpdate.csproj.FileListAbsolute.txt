@@ -1,0 +1,18 @@
+C:\Users\Samih\Desktop\Updater\Updater\bin\Debug\AppUpdate.exe.config
+C:\Users\Samih\Desktop\Updater\Updater\bin\Debug\AppUpdate.exe
+C:\Users\Samih\Desktop\Updater\Updater\bin\Debug\AppUpdate.pdb
+C:\Users\Samih\Desktop\Updater\Updater\obj\Debug\AppUpdate.csprojResolveAssemblyReference.cache
+C:\Users\Samih\Desktop\Updater\Updater\obj\Debug\AppUpdate.exe
+C:\Users\Samih\Desktop\Updater\Updater\obj\Debug\AppUpdate.pdb
+C:\Users\Samih\Desktop\AppUpdate\AppUpdate\bin\Debug\AppUpdate.exe.config
+C:\Users\Samih\Desktop\AppUpdate\AppUpdate\bin\Debug\AppUpdate.exe
+C:\Users\Samih\Desktop\AppUpdate\AppUpdate\bin\Debug\AppUpdate.pdb
+C:\Users\Samih\Desktop\AppUpdate\AppUpdate\obj\Debug\AppUpdate.csprojResolveAssemblyReference.cache
+C:\Users\Samih\Desktop\AppUpdate\AppUpdate\obj\Debug\AppUpdate.exe
+C:\Users\Samih\Desktop\AppUpdate\AppUpdate\obj\Debug\AppUpdate.pdb
+E:\Visual Studio Projects\AppUpdate\AppUpdate\bin\Debug\AppUpdate.exe.config
+E:\Visual Studio Projects\AppUpdate\AppUpdate\bin\Debug\AppUpdate.exe
+E:\Visual Studio Projects\AppUpdate\AppUpdate\bin\Debug\AppUpdate.pdb
+E:\Visual Studio Projects\AppUpdate\AppUpdate\obj\Debug\AppUpdate.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\AppUpdate\AppUpdate\obj\Debug\AppUpdate.exe
+E:\Visual Studio Projects\AppUpdate\AppUpdate\obj\Debug\AppUpdate.pdb
