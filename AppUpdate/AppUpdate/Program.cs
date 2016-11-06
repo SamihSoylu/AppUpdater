@@ -1,27 +1,5 @@
 ﻿/*
  * Created by Samih Soylu
- *
- * Notes:
- *      - files must be name version1.zip, version2.zip and onwards.
- *      - update.bin has been hard coded as the binary file that contains all the settings.
- *
- * Error Codes:
- *      01 - Missing file
- *           update.bin is missing, you must put it in to the same diretory as AppUpdate.exe
- *
- *      23 - Corrupted file
- *           FileManager.cs cannot read the file. It is corrupted. Update.bin has most likely been tampered
- *
- *      24 - File does not exist
- *           FileManager.cs cannot open file or does not have permissions to access it.
- *
- *      25 - File exists
- *           Filemanager.cs cannot create a new file because it exists
- *
- *      26 - File in use
- *           FileManager.cs cannot write to file because it is currently in use and has no access.
- *
- *
  */
 
 using System;
