@@ -1,30 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-using System.Net;
-using System.ComponentModel;
-
-
-namespace Updater
+namespace AppUpdate
 {
-    class FileDownloader
+    internal class FileDownloader
     {
         // Creates web client instance
-        WebClient client = new WebClient();
-        FileManager filemanager = new FileManager();
+        private WebClient Client = new WebClient();
 
-        // Variables
+        // Instantiates file manager
+        private FileManager FileManager = new FileManager();
+
+        // For later to check if download it complete
         private volatile bool _completed;
-        private bool DownloadCompleted { get { return _completed; } }
-        private int counter;
-        public bool err = false;
 
-        // Begind sdownload process
-        public void InitiateDownload(string address, string saveAs="update.zip")
+        // Volatile bool is returned
+        private bool DownloadCompleted { get { return _completed; } }
+
+        // Counter used in download progress method
+        private int counter;
+
+        // Error boolean used to check if the download has failed.
+        public bool HasError = false;
+
+        /*
+         * Download() - Downloads file from web address and saves
+         *              downloaded file as NewUpdate.zip
+         *
+         * @param string address - web address of file
+         * @param string saveAs  - file name to save as
+         */
+
+        public void Download(string address, string saveAs = "NewUpdate.zip")
         {
             this._completed = false;
 
@@ -32,9 +45,9 @@ namespace Updater
 
             try
             {
-                client.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
-                client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgress);
-                client.DownloadFileAsync(Uri, saveAs);
+                Client.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
+                Client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgress);
+                Client.DownloadFileAsync(Uri, saveAs);
 
                 while (!_completed)
                 {
@@ -43,18 +56,14 @@ namespace Updater
             }
             catch (WebException e)
             {
-                filemanager.errLog(e.ToString());
+                FileManager.LogError("FileDownloader :: " + e.ToString());
                 this._completed = true;
-                this.err = true;
+                this.HasError = true;
 
-                Console.WriteLine("DOWNLOAD [NOT FOUND]");
-                
+                Console.WriteLine("DOWNLOAD WAS NOT FOUND");
             }
-
-            //filemanager.errLog(e.ToString()
         }
 
-        // Shows download process
         private void DownloadProgress(object sender, DownloadProgressChangedEventArgs e)
         {
             counter++;
@@ -78,7 +87,7 @@ namespace Updater
                 Console.WriteLine("DOWNLOAD [CANCELLED]");
                 this._completed = false;
             }
-            else if (this.err == false)
+            else if (this.HasError == false)
             {
                 // Console.WriteLine("ARCHIVE DOWNLOAD: [SUCCESS]");
                 this._completed = true;

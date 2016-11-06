@@ -7,8 +7,8 @@
     <ProjectGuid>{9EC455EA-CF97-4E3D-BE52-69E59A362ACC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Updater</RootNamespace>
-    <AssemblyName>Launcher</AssemblyName>
+    <RootNamespace>AppUpdate</RootNamespace>
+    <AssemblyName>AppUpdate</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -51,10 +51,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>bats.ico</ApplicationIcon>
+    <ApplicationIcon>app.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Updater.Program</StartupObject>
+    <StartupObject>AppUpdate.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -107,11 +107,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="app.manifest" />
-    <None Include="Updater_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bats.ico" />
-    <Content Include="update.ico" />
+    <Content Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

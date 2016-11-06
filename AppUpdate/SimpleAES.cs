@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Data;
-using System.Security.Cryptography;
 using System.IO;
+using System.Security.Cryptography;
 using System.Text;
 
-namespace Updater
+namespace AppUpdate
 {
     [Serializable]
     public class SimpleAES

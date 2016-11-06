@@ -1,25 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.IO;
-using System.IO.Compression;
-
-namespace Updater
+namespace AppUpdate
 {
-    static class ZipArchiveEntryExtensions
+    internal static class ZipArchiveEntryExtensions
     {
         public static bool IsFolder(this ZipArchiveEntry entry)
         {
             return entry.FullName.EndsWith("/");
         }
-    } 
+    }
 
-    class ArchiveManager
+    internal class ArchiveManager
     {
-
         public bool decompress(string zipPath, string extractPath = "")
         {
             try
@@ -61,7 +59,6 @@ namespace Updater
 
             Console.WriteLine("DECOMPRESS [SUCCESS]");
             return true;
-
         }
     }
 }

@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization; // reference system.web.extension
 
-namespace Updater
+namespace AppUpdate
 {
-    class JSON
+    internal class JSON
     {
         public string updateUrl;
         public int updateVersion;
@@ -20,11 +20,9 @@ namespace Updater
                 updateUrl = url,
                 updateVersion = vers,
                 whenFinishedLaunch = file
-
             };
             var json = new JavaScriptSerializer().Serialize(obj);
             return json;
-
         }
 
         public bool Decode(string data)
@@ -47,7 +45,6 @@ namespace Updater
                 return false;
             }
         }
-
     }
 
     public class JsonDeserializer
