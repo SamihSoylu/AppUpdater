@@ -83,7 +83,7 @@ When you release the second update, in this case **version.txt** needs to have t
 
 ### Things to Keep in mind
   - It is not recommended to remove the previous version zip file (Eg. version1.zip) as users will not be able to download the previous release before the newest.
-  - Only place a file that should be updated or the update size will be too large which may not be appriciated by your users.
+  - Only place the files that should be updated in to your version archive to prevent large updates. 
 
 
 ### Error Codes
@@ -104,9 +104,9 @@ When you release the second update, in this case **version.txt** needs to have t
            FileManager.cs cannot write to file because it is currently in use and/or has no access.
 
 
+### Support
 
-
-
+If you think I missed out something, or you have suggestions to add to this read me. I can be contacted via mail@samihsoylu.co.uk
 
 
 
