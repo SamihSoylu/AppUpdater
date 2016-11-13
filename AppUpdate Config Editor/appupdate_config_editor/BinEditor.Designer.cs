@@ -60,6 +60,7 @@
             this.lblURL.Name = "lblURL";
             this.lblURL.Size = new System.Drawing.Size(151, 20);
             this.lblURL.TabIndex = 1;
+            this.lblURL.Text = "http://your-site.com/update/";
             // 
             // label4
             // 
@@ -100,6 +101,7 @@
             this.lblLAUNCH.Name = "lblLAUNCH";
             this.lblLAUNCH.Size = new System.Drawing.Size(151, 20);
             this.lblLAUNCH.TabIndex = 7;
+            this.lblLAUNCH.Text = "start.exe";
             // 
             // lblVERSION
             // 
