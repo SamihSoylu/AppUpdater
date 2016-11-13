@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Author: Samih Soylu.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -29,6 +33,9 @@ namespace AppUpdate
         // Error boolean used to check if the download has failed.
         public bool HasError = false;
 
+        // Used in downloadprogress to determine where to reset the cursor
+        private int left, top;
+
         /*
          * Download() - Downloads file from web address and saves
          *              downloaded file as NewUpdate.zip
@@ -45,6 +52,16 @@ namespace AppUpdate
 
             try
             {
+                /*
+                 * Saves current cursor position
+                 *
+                 * Added it here otherwise pointer would move to start of console.
+                 * This only happenend when there was a small zip file to download
+                 * and the Draw Progress Bar method was never accessed.
+                 */
+                this.left = Console.CursorLeft;
+                this.top = Console.CursorTop;
+
                 Client.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
                 Client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgress);
                 Client.DownloadFileAsync(Uri, saveAs);
@@ -71,12 +88,8 @@ namespace AppUpdate
             if (counter % 500 == 0)
             {
                 // Displays the operation identifier, and the transfer progress.
-                Console.WriteLine(" DOWNLOAD:  "
-                              + ((e.BytesReceived / 1024f) / 1024f).ToString("#0.##") + "mb"
-                              + " of "
-                              + ((e.TotalBytesToReceive / 1024f) / 1024f).ToString("#0.##") + "mb"
-                              + " \t(" + e.ProgressPercentage + "%)"
-                );
+
+                DrawProgressBar(e.ProgressPercentage, 100, 25, '=', e);
             }
         }
 
@@ -84,14 +97,62 @@ namespace AppUpdate
         {
             if (e.Cancelled == true)
             {
-                Console.WriteLine("DOWNLOAD [CANCELLED]");
+                Console.WriteLine("DOWNLOAD CANCELLED");
                 this._completed = false;
             }
             else if (this.HasError == false)
             {
-                // Console.WriteLine("ARCHIVE DOWNLOAD: [SUCCESS]");
+                Console.SetCursorPosition(this.left, this.top);
+                Console.WriteLine("DOWNLOAD COMPLETE\t\t\t\t\t");
                 this._completed = true;
             }
+        }
+
+        private void DrawProgressBar(int complete, int maxVal, int barSize, char progressCharacter, DownloadProgressChangedEventArgs e)
+        {
+            Console.CursorVisible = false;
+
+            // Saves current cursor position
+            this.left = Console.CursorLeft;
+            this.top = Console.CursorTop;
+
+            decimal perc = (decimal)complete / (decimal)maxVal;
+            int chars = (int)Math.Floor(perc / ((decimal)1 / (decimal)barSize));
+            string p1 = String.Empty, p2 = String.Empty;
+
+            for (int i = 0; i < chars; i++)
+            {
+                if (i == (chars - 1))
+                {
+                    p1 += '>';
+                }
+                else
+                {
+                    p1 += progressCharacter;
+                }
+            }
+            for (int i = 0; i < barSize - chars; i++) p2 += progressCharacter;
+
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write("[");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(p1);
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.Write(p2);
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write("]");
+
+            Console.ResetColor();
+            Console.Write(" ({0}%)", e.ProgressPercentage);
+
+            Console.Write(" "
+                              + ((e.BytesReceived / 1024f) / 1024f).ToString("#0.##") + "MB"
+                              + " of "
+                              + ((e.TotalBytesToReceive / 1024f) / 1024f).ToString("#0.##") + "MB \t\t"
+                );
+
+            // Resets cursor position
+            Console.SetCursorPosition(this.left, this.top);
         }
     }
 }
