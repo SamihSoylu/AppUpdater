@@ -106,5 +106,7 @@ When you release the second update, in this case **version.txt** needs to have t
 
 If you think I have missed out something while writting this readme file, or you have suggestions to add. I can be contacted via mail@samihsoylu.co.uk. If you also find bugs, let me know!
 
+### Author
 
+Made by Samih Soylu.
 
