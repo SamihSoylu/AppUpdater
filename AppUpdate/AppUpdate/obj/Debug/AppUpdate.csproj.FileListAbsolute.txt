@@ -16,3 +16,9 @@ E:\Visual Studio Projects\AppUpdate\AppUpdate\bin\Debug\AppUpdate.pdb
 E:\Visual Studio Projects\AppUpdate\AppUpdate\obj\Debug\AppUpdate.csprojResolveAssemblyReference.cache
 E:\Visual Studio Projects\AppUpdate\AppUpdate\obj\Debug\AppUpdate.exe
 E:\Visual Studio Projects\AppUpdate\AppUpdate\obj\Debug\AppUpdate.pdb
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate\AppUpdate\bin\Debug\AppUpdate.exe.config
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate\AppUpdate\obj\Debug\AppUpdate.exe
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate\AppUpdate\obj\Debug\AppUpdate.pdb
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate\AppUpdate\bin\Debug\AppUpdate.exe
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate\AppUpdate\bin\Debug\AppUpdate.pdb
+\\VBOXSVR\Stack\Visual Studio Projects\AppUpdate\AppUpdate\obj\Debug\AppUpdate.csprojResolveAssemblyReference.cache
