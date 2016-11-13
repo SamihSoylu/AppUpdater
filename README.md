@@ -104,7 +104,7 @@ When you release the second update, in this case **version.txt** needs to have t
 
 ### Support
 
-If you think I have missed out something while writting this readme file, or you have suggestions to add. I can be contacted via mail@samihsoylu.co.uk. If you also find bugs, let me know!
+If you think I have missed out something while writting this readme file, or you have suggestions to add. I can be contacted via samih@nivano.nl. If you also find bugs, let me know!
 
 ### Author
 
