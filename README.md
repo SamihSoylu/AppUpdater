@@ -11,7 +11,7 @@ AppUpdate is an open source console application that allows you to update your s
 
 ### Features
   - Connects to your web server to check for new updates
-  - When you release 3 versions in a day, your users receive all of the patches in the correct order
+  - When you release more than one version in a day, your users receive all of the patches in the correct order
   - Opens your software/project exe file after update check is complete.
   - Logs errors
 
@@ -34,7 +34,7 @@ You need four things,
 
 ## Setting this up
 
-I assume that you have a public domain address which as an example can be traditionally written like this `example.com`, and you have access to the `public_html` directory using FTP.
+I assume that you have a public domain address which as an example can be traditionally written like this: `example.com`, and you have access to the `public_html` directory using FTP.
 
 I also assume you know how to use an FTP client. If not, Google is your friend.
 
@@ -77,13 +77,11 @@ Now that you have created the version.txt, put all your files that need to be up
 
 AppUpdate will override every file when it downloads and extracts.
 
-You must update the number **1** incrementation every time you upload a new version file in to the update directory.
-
 When you release the second update, in this case **version.txt** needs to have the value 2 and the new zip file will need to be called **version2.zip**.
 
 ### Things to Keep in mind
-  - It is not recommended to remove the previous version zip file (Eg. version1.zip) as users will not be able to download the previous release before the newest.
-  - Only place the files that should be updated in to your version archive to prevent large updates. 
+  - It is not recommended to remove the previous version zip files (Eg. version1.zip) as users will not be able to download the previous release before the newest.
+  - Only place files in to your archive,in which you think is important for the user to update. Placing files that have no changes such as image files of an application can cause un necessary transfer times during update.
 
 
 ### Error Codes
@@ -106,7 +104,7 @@ When you release the second update, in this case **version.txt** needs to have t
 
 ### Support
 
-If you think I missed out something, or you have suggestions to add to this read me. I can be contacted via mail@samihsoylu.co.uk
+If you think I have missed out something while writting this readme file, or you have suggestions to add. I can be contacted via mail@samihsoylu.co.uk. If you also find bugs, let me know!
 
 
 
